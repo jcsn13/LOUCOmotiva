@@ -1,0 +1,14 @@
+Requisitos funcionais:
+
+Rf01 = Emissão de passagens de trem.
+
+Rf02 = Escolha de destinos e checar disponibilidade de passagens.
+
+Rf03 = Receber dados de identificação e do cartão de crédito, além da checagem para a validação da transação.
+
+Rf04 = Menu quando o botão de iniciar é pressionado, e tela com possíveis destinos.Mensagem para escolher o destino.
+
+Requisitos não funcionais:
+
+Rnf01 = Emissão das passagens de acordo com as padrões.
+
