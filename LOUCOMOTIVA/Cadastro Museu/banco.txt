@@ -1,2 +1,4 @@
-Visitante;Cidade;Instragram;
-
+Idade;Nota;Data;
+5;5;26/5/2019;
+11;6;27/5/2019;
+66;5;27/5/2019;
