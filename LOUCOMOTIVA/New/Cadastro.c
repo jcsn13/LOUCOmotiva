@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "DAO.h"
 
+void sleep();
+
 int main(int argc, char *argv[])
 {	
 	pilha = NULL;//Valor da pilha é nulo,pois não há nenhum elemento nela

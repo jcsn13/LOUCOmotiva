@@ -23,3 +23,4 @@ void imprimir_pilha();
 void cadastrar_visitante();
 void incluir_visitante();
 void consulta_tudo();
+void destruir_pilha(struct pilha *pilha_visitantes);

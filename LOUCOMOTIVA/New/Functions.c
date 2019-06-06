@@ -15,32 +15,33 @@ void incluir_visitante(struct visitantes v)
 	Apos, concatena todos os dados em uma String, separados por ";".E por final da append dessa String em um arquivo .txt com uma quebra de linha no final, e imprime uma mensagem de sucesso.
 	*/
 
-    char *dados;
+    // char *dados;
 
-    dados = (char *) malloc(sizeof(v));
+    // dados = (char *) malloc(sizeof(v));
 
-    if(dados == NULL){
-        printf("Erro de alocação de memória(dados)\n");
+    // if(dados == NULL){
+    //     printf("Erro de alocação de memória(dados)\n");
         
-        exit(1);
-    }
-
-    strcat(dados, v.idade);
-    strcat(dados, ";");
-    strcat(dados, v.nota);
-    strcat(dados, ";");
-    strcat(dados, v.data);
-    strcat(dados, ";");
-    strcat(dados, "\n");
+    //     exit(1);
+    // }
+    // debug aqui
+    // printf("%s\n",v.idade);
+    // strcat(dados, v.idade);
+    // strcat(dados, ";");
+    // strcat(dados, v.nota);
+    // strcat(dados, ";");
+    // strcat(dados, v.data);
+    // strcat(dados, ";");
+    // strcat(dados, "\n");
 
     pont_arq = fopen("banco.txt", "a");
 
-    fprintf(pont_arq, "%s", dados);
+    fprintf(pont_arq,"%s;%s;%s\n",v.idade,v.nota,v.data);
     fclose(pont_arq);
 
     printf("Visitante Salvo\n");
 
-    free(dados);
+    // free(dados);
 }
 
 void consulta_tudo()
@@ -178,10 +179,7 @@ struct pilha * empilhar(struct pilha *pilha_visitantes,struct visitantes *v)
         auxiliar->prox_visitante = pilha_visitantes;
 
         return auxiliar;
-
-        free(auxiliar);
     }
-    free(pilha_visitantes);
 }
 
 void imprimir_pilha(struct pilha *pilha_visitantes)
@@ -244,6 +242,12 @@ void desempilhar_e_salvar(struct pilha *pilha_visitantes)
 
         }
         free(percorre_pilha);
+        destruir_pilha(pilha_visitantes);
     }   
 }
 
+void destruir_pilha(struct pilha *pilha_visitantes)
+{
+
+
+}
