@@ -3,10 +3,10 @@
 #include "DAO.h"
 
 int main(int argc, char *argv[])
-{
-	struct pilha *p = NULL;
+{	
+	pilha = NULL;//Valor da pilha é nulo,pois não há nenhum elemento nela
+	
 	struct visitantes cadastro_v;
-
 	cadastro_v.nota = (char *) malloc(2*sizeof(char));
 	cadastro_v.idade = (char *) malloc(2 * sizeof(char));
 	cadastro_v.data = (char *) malloc(10 * sizeof(char));
@@ -30,11 +30,12 @@ int main(int argc, char *argv[])
 	cadastro_v3.idade = "80";
 	cadastro_v3.nota = "3";
 
-	p = empilhar(p,&cadastro_v);
-	p = empilhar(p, &cadastro_v2);
-	p = empilhar(p, &cadastro_v3);
-	desempilhar_e_salvar(p);
-	imprimir_pilha(p);
+	pilha = empilhar(pilha,&cadastro_v);
+	pilha = empilhar(pilha, &cadastro_v2);
+	pilha = empilhar(pilha, &cadastro_v3);
+	desempilhar_e_salvar(pilha);
+	imprimir_pilha(pilha);
+	sleep(120);
 	return 0;
 }	
 

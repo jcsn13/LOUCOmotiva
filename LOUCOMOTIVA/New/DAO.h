@@ -15,6 +15,8 @@ struct pilha{
 
 FILE *pont_arq;
 
+struct pilha *pilha;// inicialização da lista
+
 struct pilha * empilhar(struct pilha *pilha_visitantes, struct visitantes *v);
 void desempilhar_e_salvar();
 void imprimir_pilha();

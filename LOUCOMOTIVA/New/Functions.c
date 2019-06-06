@@ -241,6 +241,7 @@ void desempilhar_e_salvar(struct pilha *pilha_visitantes)
             incluir_visitante(*user);
 
             percorre_pilha = percorre_pilha->prox_visitante;
+
         }
         free(percorre_pilha);
     }   
