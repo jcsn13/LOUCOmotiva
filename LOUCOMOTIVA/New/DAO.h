@@ -15,9 +15,9 @@ struct pilha{
 
 FILE *pont_arq;
 
-struct pilha * empilhar(struct pilha *p, struct visitantes *v);
-void imprimir();
-void imprimir2();
+struct pilha * empilhar(struct pilha *pilha_visitantes, struct visitantes *v);
+void desempilhar_e_salvar();
+void imprimir_pilha();
 void cadastrar_visitante();
 void incluir_visitante();
 void consulta_tudo();

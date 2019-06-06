@@ -17,7 +17,13 @@ void incluir_visitante(struct visitantes v)
 
     char *dados;
 
-    dados = malloc(sizeof(v));
+    dados = (char *) malloc(sizeof(v));
+
+    if(dados == NULL){
+        printf("Erro de alocação de memória(dados)\n");
+        
+        exit(1);
+    }
 
     strcat(dados, v.idade);
     strcat(dados, ";");
@@ -80,9 +86,15 @@ void cadastrar_visitante()
         char dia_h[3], ano_h[5], mes_h[3]; // variaveis auxiliares para armazenar a data como string
         //Aqui usa recursos da lib <time.h> para definir a data atual
 
-        nota = malloc(sizeof(char));
-        idade = malloc(2 * sizeof(char));
-        data = malloc(10 * sizeof(char));
+        nota = (char *) malloc(sizeof(char));
+        idade = (char *) malloc(2 * sizeof(char));
+        data = (char *) malloc(10 * sizeof(char));
+
+        if(nota == NULL || idade == NULL || data == NULL){
+            printf("Erro de alocação de memória(nota,idade,data)\n");
+
+            exit(1);
+        }
 
         printf("***Bem vindo ao feedback do Museu do Trem***\n");
         printf("Qual o sua idade?\n");
@@ -105,9 +117,15 @@ void cadastrar_visitante()
         strcat(data, "/");
         strcat(data, ano_h);
 
-        cadastro_v.nota = malloc(sizeof(nota));
-        cadastro_v.idade = malloc(sizeof(idade));
-        cadastro_v.data = malloc(sizeof(data));
+        cadastro_v.nota = (char *) malloc(sizeof(nota));
+        cadastro_v.idade = (char *) malloc(sizeof(idade));
+        cadastro_v.data = (char *) malloc(sizeof(data));
+
+        if (cadastro_v.nota == NULL || cadastro_v.idade == NULL || cadastro_v.data == NULL){
+            printf("Erro de alocação de memória(cadastro_visitante)\n");
+
+            exit(1);
+        }
 
         //copia os valores para as variaveis da struct
         strcpy(cadastro_v.idade , idade);
@@ -127,70 +145,104 @@ void cadastrar_visitante()
     } while (idade[0] != '0');
 }
 
-struct pilha * empilhar(struct pilha *p,struct visitantes *v)
+struct pilha * empilhar(struct pilha *pilha_visitantes,struct visitantes *v)
 {
 	struct pilha *novo_visitante;
 
-	if(p == NULL){
-        p = malloc(sizeof(struct pilha));
+	if(pilha_visitantes == NULL){
+        pilha_visitantes = (struct pilha *)malloc(sizeof(struct pilha));
 
-        p->visitante = v;
-		p->prox_visitante = NULL;
+        if(pilha_visitantes == NULL){
+            printf("Erro de alocação de memória(pilha_visitantes)\n");
+
+            exit(1);
+        }
+
+        pilha_visitantes->visitante = v;
+		pilha_visitantes->prox_visitante = NULL;
         
-        return p;
+        return pilha_visitantes;
     }else{
 
-		struct pilha *aux;
+		struct pilha *auxiliar;
 
-        aux = malloc(sizeof(struct pilha));
-		aux->visitante = v;
-        aux->prox_visitante = p;
+        auxiliar = (struct pilha *)malloc(sizeof(struct pilha));
 
-        return aux;
-	}
+        if (auxiliar == NULL){
+            printf("Erro de alocação de memória(auxiliar)\n");
+             
+            exit(1);
+        }
+
+        auxiliar->visitante = v;
+        auxiliar->prox_visitante = pilha_visitantes;
+
+        return auxiliar;
+
+        free(auxiliar);
+    }
+    free(pilha_visitantes);
 }
 
-void imprimir2(struct pilha *p)
+void imprimir_pilha(struct pilha *pilha_visitantes)
 {
-    if (p == NULL)
+    if (pilha_visitantes == NULL)
         printf("A Pilha vazia!\n");
     else
     {
-        struct pilha *percorre;
-        percorre = malloc(sizeof(struct pilha));
-        percorre = p;
+        struct pilha *percorre_pilha;
+        percorre_pilha = (struct pilha *)malloc(sizeof(struct pilha));
+
+        if(percorre_pilha == NULL){
+            printf("Erro de alocação de memória(auxiliar)\n");
+
+            exit(1);
+        }
+
+        percorre_pilha = pilha_visitantes;
 
         printf("-------------------------\n");
 
-        while (percorre != NULL)
+        while (percorre_pilha != NULL)
         {
-            printf("Idade: %s \n", percorre->visitante->idade);
-            printf("Data: %s \n", percorre->visitante->nota);
-            printf("Nota: %s \n", percorre->visitante->data);
+            printf("Idade: %s \n", percorre_pilha->visitante->idade);
+            printf("Data: %s \n", percorre_pilha->visitante->nota);
+            printf("Nota: %s \n", percorre_pilha->visitante->data);
             printf("-------------------------\n");
 
-            percorre = percorre->prox_visitante;
+            percorre_pilha = percorre_pilha->prox_visitante;
         }
     }   
 }
 
-void imprimir(struct pilha *p)
+void desempilhar_e_salvar(struct pilha *pilha_visitantes)
 {
-    if (p == NULL)
+    if (pilha_visitantes == NULL)
         printf("A Pilha vazia!\n");
     else
     {
-        struct pilha *percorre;
-        percorre = malloc(sizeof(struct pilha));
-        percorre = p;
+        struct pilha *percorre_pilha;
+        percorre_pilha = (struct pilha *)malloc(sizeof(struct pilha));
+
+        if (percorre_pilha == NULL)
+        {
+            printf("Erro de alocação de memória(auxiliar)\n");
+
+            exit(1);
+        }
+
+        percorre_pilha = pilha_visitantes;
 
         printf("-------------------------\n");
 
-        while (percorre != NULL)
+        while (percorre_pilha != NULL)
         {
-            struct visitantes *user = percorre->visitante;
+            struct visitantes *user = percorre_pilha->visitante;
             incluir_visitante(*user);
+
+            percorre_pilha = percorre_pilha->prox_visitante;
         }
+        free(percorre_pilha);
     }   
 }
 
