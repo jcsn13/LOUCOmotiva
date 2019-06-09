@@ -1,0 +1,47 @@
+leaks Report Version: 4.0, multi-line stacks
+Process 3355: 189 nodes malloced for 45 KB
+Process 3355: 3 leaks for 96 total leaked bytes.
+
+STACK OF 3 INSTANCES OF 'ROOT LEAK: malloc<32>':
+[thread 0x10f7bc5c0]:
+5   libdyld.dylib                      0x7fff7f68e3d5 start + 1
+4   eueu.out                              0x10001e98d main + 29
+3   eueu.out                              0x10001ede8 cadastrar_visitante + 648
+2   eueu.out                              0x10001e9bc incluir_visitante + 28
+1   libsystem_malloc.dylib             0x7fff7f838d79 malloc + 24
+0   libsystem_malloc.dylib             0x7fff7f838e21 malloc_zone_malloc + 139 
+====
+    3 (96 bytes) << TOTAL >>
+      1 (32 bytes) ROOT LEAK: 0x7fa743c02c70 [32]  length: 16  "90;6;27/5/2019;"
+      1 (32 bytes) ROOT LEAK: 0x7fa743c02cb0 [32]  length: 16  "80;6;27/5/2019;"
+      1 (32 bytes) ROOT LEAK: 0x7fa743c02de0 [32]  length: 16  "77;5;27/5/2019;"
+
+
+----------------------------------------------------------------------
+Input:
+----------------------------------------------------------------------
+
+***Bem vindo ao feedback do Museu do Trem***
+Qual o sua idade?
+77
+Qual o nota para o museu do trem?
+5
+Visitante Salvo
+***Bem vindo ao feedback do Museu do Trem***
+Qual o sua idade?
+90
+Qual o nota para o museu do trem?
+6
+Visitante Salvo
+***Bem vindo ao feedback do Museu do Trem***
+Qual o sua idade?
+80
+Qual o nota para o museu do trem?
+6
+Visitante Salvo
+***Bem vindo ao feedback do Museu do Trem***
+Qual o sua idade?
+90
+Qual o nota para o museu do trem?
+4
+Visitante Salvo

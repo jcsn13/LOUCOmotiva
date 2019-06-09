@@ -210,6 +210,7 @@ void imprimir_pilha(struct pilha *pilha_visitantes)
 
             percorre_pilha = percorre_pilha->prox_visitante;
         }
+        free(percorre_pilha);
     }   
 }
 
@@ -237,17 +238,13 @@ void desempilhar_e_salvar(struct pilha *pilha_visitantes)
         {
             struct visitantes *user = percorre_pilha->visitante;
             incluir_visitante(*user);
-
             percorre_pilha = percorre_pilha->prox_visitante;
-
         }
         free(percorre_pilha);
-        destruir_pilha(pilha_visitantes);
+        // destruir_pilha(pilha_visitantes);
     }   
 }
 
 void destruir_pilha(struct pilha *pilha_visitantes)
 {
-
-
 }

@@ -1,0 +1,47 @@
+leaks Report Version: 4.0, multi-line stacks
+Process 3606: 185 nodes malloced for 45 KB
+Process 3606: 0 leaks for 0 total leaked bytes.
+
+MacBook-Pro-de-Jose:~ claudio$ leaks eueu.out 
+Process:         eueu.out [3606]
+Path:            /Users/USER/Desktop/*/eueu.out
+Load Address:    0x107ab6000
+Identifier:      eueu.out
+Version:         0
+Code Type:       X86-64
+Parent Process:  bash [3594]
+
+Date/Time:       2019-05-27 10:10:18.688 -0300
+Launch Time:     2019-05-27 10:09:46.005 -0300
+OS Version:      Mac OS X 10.14.5 (18F132)
+Report Version:  7
+Analysis Tool:   /usr/bin/leaks
+
+Physical footprint:         1304K
+Physical footprint (peak):  1304K
+----
+
+leaks Report Version: 4.0, multi-line stacks
+Process 3606: 185 nodes malloced for 45 KB
+Process 3606: 0 leaks for 0 total leaked bytes.
+
+Input:
+
+***Bem vindo ao feedback do Museu do Trem***
+Qual o sua idade?
+77
+Qual o nota para o museu do trem?
+6
+Visitante Salvo
+***Bem vindo ao feedback do Museu do Trem***
+Qual o sua idade?
+5
+Qual o nota para o museu do trem?
+7
+Visitante Salvo
+***Bem vindo ao feedback do Museu do Trem***
+Qual o sua idade?
+90
+Qual o nota para o museu do trem?
+5
+Visitante Salvo

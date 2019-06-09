@@ -4,7 +4,7 @@
 #include <time.h>
 #include "DAO.h"
 
-void incluir_visitante(struct Visitantes v)
+void incluir_visitante(struct visitantes v)
 {
     /*
 	Recebe como parametro os dados do visitante:
@@ -13,7 +13,7 @@ void incluir_visitante(struct Visitantes v)
 	  -Idade do visitante
 
 	Apos, concatena todos os dados em uma String, separados por ";".E por final da append dessa String em um arquivo .txt com uma quebra de linha no final, e imprime uma mensagem de sucesso.
-	   */
+	*/
 
     char *dados;
 
@@ -28,10 +28,13 @@ void incluir_visitante(struct Visitantes v)
     strcat(dados, "\n");
 
     pont_arq = fopen("banco.txt", "a");
+
     fprintf(pont_arq, "%s", dados);
     fclose(pont_arq);
 
     printf("Visitante Salvo\n");
+
+    free(dados);
 }
 
 void consulta_tudo()
@@ -64,56 +67,56 @@ void cadastrar_visitante()
 
     do
     {
-        struct Visitantes cadastroV;
-        struct tm *local;
+        struct visitantes cadastro_v;
+        struct tm * local;
 
         time_t t;
         t = time(NULL);
         local = localtime(&t);
 
-        int dia = local->tm_mday;
-        int mes = local->tm_mon + 1;
-        int ano = local->tm_year + 1900;
-        char diaH[3], anoH[5], mesH[3]; // variaveis auxiliares para armazenar a data como string
+        int dia = local -> tm_mday;
+        int mes = local -> tm_mon + 1;
+        int ano = local -> tm_year + 1900;
+        char dia_h[3], ano_h[5], mes_h[3]; // variaveis auxiliares para armazenar a data como string
         //Aqui usa recursos da lib <time.h> para definir a data atual
 
         nota = malloc(sizeof(char));
         idade = malloc(2 * sizeof(char));
-        data = malloc(20 * sizeof(char));
+        data = malloc(16 * sizeof(char));
 
         printf("***Bem vindo ao feedback do Museu do Trem***\n");
-        printf("Qual o sua idade?\n");
+        printf("Qual a sua idade?\n");
         scanf("%s", idade);
-        printf("Qual o nota para o museu do trem?\n");
+        printf("Qual a nota para sua experiência no museu do trem?\n");
         scanf("%s", nota);
 
-        //converte as variaveis dia,mes e ano que sao do tipo int em string e sao salvas respectivamente em diaH,mesH e anoH
-        sprintf(diaH, "%i", dia);
-        sprintf(anoH, "%i", ano);
-        sprintf(mesH, "%i", mes);
+        //converte as variaveis dia,mes e ano que sao do tipo int em string e sao salvas respectivamente em dia_h,mes_h e ano_h
+        sprintf(dia_h, "%i", dia);
+        sprintf(ano_h, "%i", ano);
+        sprintf(mes_h, "%i", mes);
 
-        //concatena diaH,mesH e anoH para ficar no formato dd/mm/aaaa
-        strcat(data, diaH);
+        //concatena dia_h,mes_h e ano_h para ficar no formato dd/mm/aaaa
+        strcat(data, dia_h);
         strcat(data, "/");
-        strcat(data, mesH);
+        strcat(data, mes_h);
         strcat(data, "/");
-        strcat(data, anoH);
+        strcat(data, ano_h);
 
-        cadastroV.nota = malloc(sizeof(nota));
-        cadastroV.idade = malloc(sizeof(idade));
-        cadastroV.data = malloc(sizeof(data));
+        cadastro_v.nota = malloc(sizeof(nota));
+        cadastro_v.idade = malloc(sizeof(idade));
+        cadastro_v.data = malloc(sizeof(data));
 
         //copia os valores para as variaveis da struct
-        strcpy(cadastroV.idade, idade);
-        strcpy(cadastroV.data, data);
-        strcpy(cadastroV.nota, nota);
+        strcpy(cadastro_v.idade , idade);
+        strcpy(cadastro_v.data , data);
+        strcpy(cadastro_v.nota , nota);
 
         if (idade[0] != '0')
-            incluir_visitante(cadastroV);
+            incluir_visitante(cadastro_v);
 
-        free(cadastroV.idade);
-        free(cadastroV.data);
-        free(cadastroV.nota);
+        free(cadastro_v.idade);
+        free(cadastro_v.data);
+        free(cadastro_v.nota);
         free(nota);
         free(data);
         free(idade);
