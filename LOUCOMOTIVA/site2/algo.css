@@ -1,0 +1,17 @@
+@charset "UTF-8";
+h1 {
+			font-family: Arial;
+			font-size: 30pt;
+			color: black;
+			text-shadow: 2px 2px 2px black;
+			position: relative;
+			left: 600px;
+			
+		}
+#close{
+	position: fixed;
+	right: 10px;
+	top: 10px;
+
+	
+ }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira pergunta</title>
+</head>
+<style>
+    h1{
+        position: absolute;
+        left: 600px;
+        top:10px;
+    }
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        
+        .modal {
+          display: none;
+          position: fixed; 
+          z-index: 1; 
+         
+          left: 500px;
+          top: 80px;
+          width: 100%; 
+          height: 100%; 
+          overflow: auto; 
+       
+        }
+        
+    
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  position:fixed;
+  left: 500px;
+  top: 80px;
+  border: 0px solid #888;
+  width: 70%;
+  height: 30%;
+}
+#close.modal{
+    position: fixed;
+    bottom:10px;
+    left:10px;
+}
+#close{
+    position: fixed;
+	right: 10px;
+	top: 10px;
+
+}
+
+        
+        
+    
+</style>
+
+<body>
+
+
+        
+      
+        
+        
+        <div id="myModal" class="modal">
+        
+          
+          <div class="modal-content">
+              <button id = "close.modal" onclick="window.location='file:///C:/Users/Pedro/Documents/site/quinta_tela.html';">continuar
+            <video width="800" height="600" autoplay>
+            <source src="BOTAScmusica.mp4" type="video/mp4">
+            </video>
+        </button>
+          </div>
+        
+        </div>
+<script type="text/javascript" src="vamos.js">
+ 
+</script>
+    <h1>Escolha seu destino</h1>
+    <div id = 'imagem' onclick=abrir()>
+    <img src="Recife.jpg" style="width:500px;height:300px;position:fixed;left:200px;top:80px;"onclick="add(vet = 0)"/>
+    <img src="Gravatá.jpg" style="width:500px;height:300px;position:fixed;left:200px;top:400px;"onclick="add(vet = 1)"/>
+    <img src="Caruaru.jpg" style="width:500px;height:300px;position:fixed;right:200px;top:400px;"onclick="add(vet = 2)"/>
+    <img src="Cabo.jpg" style="width:500px;height:300px;position:fixed;right:200px;top:80px;"onclick="add(vet = 3)"/>
+    </div>
+    
+
+    <div id = 'fechar'>
+    <button id = 'close' onclick="window.location='file:///C:/Users/Pedro/Documents/site/terceira_tela.html';">X</button>
+    </div>
+    
+    
+</body>
+</html>

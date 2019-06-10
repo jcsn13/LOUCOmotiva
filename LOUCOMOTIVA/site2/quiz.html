@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<title>Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  style="background-image:url('carinha.jpg');"
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}k mjuu
+</style>
+<body>
+
+<script type="text/javascript">
+  var cont = [0,0,0]
+  function add(vet){
+        if (vet == 0){ cont[vet]++;}
+        if (vet == 1){ cont[vet]++;}
+        if (vet == 2){ cont[vet]++;}
+        alert(cont)
+  }
+  
+</script>
+<!--
+  pegar o maior valor do array
+  https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
+  pegar posição do array
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+  -->
+<!-- Header -->
+<header>
+</header>
+  <!-- Sobre o projeto -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="width:800px" id="sobrenos">
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third"> 
+      <a href="#" onclick="window.open("file:///C:/Users/Pedro/Documents/site/NewQuiz.html",
+"mywindow","location=1,status=1,scrollbars=1,
+width=100,height=100");">
+       <p>Caruaru</p>
+        <img src="caruaru.jpg" class="w3-round w3-margin-bottom w3-hover-opacity"  alt="car" style="width:230px" style="height: 200px"
+        onclick="add(vet = 0)" >
+        <br>
+      </div>
+      <div class="w3-third">
+        <p>Garanhuns</p>
+        <img src="garanhuns.jpg" class="w3-round w3-margin-bottom w3-hover-opacity" alt="gar" style="width:230px" style="height: 200px" 
+        onclick="add(vet = 1)">
+        <br>
+      </div>
+      <div class="w3-third">
+        <p>Recife</p>
+        <img src="recife.jpg" class="w3-round w3-hover-opacity" alt="rec" style="width:230px" style="height: 200px" 
+        onclick="add(vet = 2)">
+        <br>
+        <p>Natal</p>
+        <img src="natal.jpg" class="w3-round w3-margin-bottom w3-hover-opacity" alt="nat" style="width:230px" style="height: 200px"
+        onclick="add(vet = 1)">
+      </a>
+        <br>
+      </div>
+    </div>
+  </div>
