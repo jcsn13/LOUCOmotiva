@@ -1,6 +1,6 @@
 CC = gcc
 all:
-	$(CC) Cadastro.c Functions.c -o Teste.out
+	$(CC) Cadastro.c Funcoes_cadastro.c Pilha.c -o Teste.out
 run:
 	./Teste.out
 clean:
