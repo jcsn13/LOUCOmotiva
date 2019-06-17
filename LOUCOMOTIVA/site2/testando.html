@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.css">
+  <link rel="stylesheet" href="testando.css">
+
+  <title>testando pro quiz</title>
+</head>
+
+<body>
+    
+  
+         
+
+  <div class="container">
+
+    <nav aria-label=...>
+      <ul class=pagination>
+        <li id="previous-page"><a href="javascript:void(0)" aria-label=Previous><span aria-hidden=true>X</span></a></li>
+      </ul>
+    </nav>
+    
+
+ 
+    <div id="page">    
+      <!--<div class="list-group">
+          
+
+        <a href="javascript:void(0)" class="list-group-item active">
+              <div id="Imagens1" onclick="abrir()">
+              <img id="img1" src="C:\Users\Pedro\Documents\site\Imagens\temporario\Francês.png" style="width:150px;height:160px;position:fixed;left:500px;top:150px;"/>
+              <img src="C:\Users\Pedro\Documents\site\Imagens\temporario\ingles.jfif" style="width:150px;height:160px;position:fixed;left:500px;top:400px;"/>
+              <img src="C:\Users\Pedro\Documents\site\Imagens\temporario\portugues.jpg" style="width:150px;height:160px;position:fixed;right:500px;top:400px;"/>
+             <img src="C:\Users\Pedro\Documents\site\Imagens\temporario\espanhol.jpg" style="width:150px;height:160px;position:fixed;right:500px;top:150px;"/>
+            </div>
+              </a>
+      </div>-->
+
+      
+
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <h1 id = "h1-ST-first">Feedback</h1>
+          <h1 id = "h1-ST-second">Quiz</h1>
+        </a>
+      </div>
+
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <h1 id ="h1-TT">Quiz</h1>
+          <p id ="p-TT">Vamos descobrir qual profissional ferroviário seria você, de acordo com a sua personalidade!
+            Lembre-se, nesta viagem o trem não pode parar. Mas não se preocupe, você pode pegá-lo novamente!</p>
+        </a>
+      </div>
+
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <h1 style="position:fixed;left:400px;top:180px;">Recife</h1>
+          <img src="C:\Users\Pedro\Documents\site\Imagens\Destino\Recife.jpg" style="width:500px;height:300px;position:fixed;left:200px;top:80px;"onclick="pegar1(vet = 0)"/>
+                <img src="C:\Users\Pedro\Documents\site\Imagens\Destino\Gravatá.jpg" style="width:500px;height:300px;position:fixed;left:200px;top:400px;"onclick="pegar1(vet = 1)"/>
+                <img src="C:\Users\Pedro\Documents\site\Imagens\Destino\Caruaru.jpg" style="width:500px;height:300px;position:fixed;right:200px;top:400px;"onclick="pegar1(vet = 2)"/>
+                <img src="C:\Users\Pedro\Documents\site\Imagens\Destino\Cabo.jpg" style="width:500px;height:300px;position:fixed;right:200px;top:80px;"onclick="pegar1(vet = 3)"/>
+        </a>
+      </div>
+      
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <video id="VPE1" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\Destino\ESTAÇAORECIFEcmusica.mp4" type="video/mp4"></video>
+          <video id="VPE2" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\Destino\ESTACAOGRAVATAcmusica.mp4" type="video/mp4"></video>
+          <video id="VPE3" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\Destino\ESTACAOCARUARUcmusica.mp4" type="video/mp4"></video>
+          <video id="VPE4" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\Destino\ESTACAOCABOcmusica.mp4" type="video/mp4"></video>
+        </a>
+      </div>
+
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <img src="C:\Users\Pedro\Documents\site\Imagens\Vestuário\Botas.png" style="width:150px;height:160px;position:fixed;left:500px;top:150px;"onclick="pegar2(vet = 0)"/>
+                <img src="C:\Users\Pedro\Documents\site\Imagens\Vestuário\Headset1.jpg" style="width:150px;height:160px;position:fixed;left:500px;top:400px;"onclick="pegar2(vet = 1)"/>
+                <img src="C:\Users\Pedro\Documents\site\Imagens\Vestuário\Macacão.jpg" style="width:150px;height:160px;position:fixed;right:500px;top:400px;"onclick="pegar2(vet = 2)"/>
+                <img src="C:\Users\Pedro\Documents\site\Imagens\Vestuário\Quepe.jpg" style="width:150px;height:160px;position:fixed;right:500px;top:150px;"onclick="pegar2(vet = 3)"/>
+        </a>
+      </div>
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <video id="VSE1" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\vestuário\BOTAScmusica.mp4" type="video/mp4"></video>
+          <video id="VSE2" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\vestuário\FONEScmusica.mp4" type="video/mp4"></video>
+          <video id="VSE3" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\vestuário\MACACAOcmusica.mp4" type="video/mp4"></video>
+          <video id="VSE4" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\vestuário\QUEPEcmusica.mp4" type="video/mp4"></video>
+        </a>
+      </div>
+
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <img src="C:\Users\Pedro\Documents\site\Imagens\Ferramentas\Trolley.jpg" style="width:500px;height:300px;position:fixed;left:200px;top:80px;"onclick="pegar3(vet = 0)"/>
+          <img src="C:\Users\Pedro\Documents\site\Imagens\Ferramentas\Marreta.jpg" style="width:500px;height:300px;position:fixed;left:200px;top:400px;"onclick="pegar3(vet = 1)"/>
+          <img src="C:\Users\Pedro\Documents\site\Imagens\Ferramentas\Manche.jpg" style="width:500px;height:300px;position:fixed;right:200px;top:400px;"onclick="pegar3(vet = 2)"/>
+          <img src="C:\Users\Pedro\Documents\site\Imagens\Ferramentas\oi.jpg" style="width:500px;height:300px;position:fixed;right:200px;top:80px;"onclick="pegar3(vet = 3)"/>
+          
+        </a>
+      </div>
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <video id="VTE1" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\ferramentas\TROLLEYcmusica.mp4" type="video/mp4"></video>
+          <video id="VTE2" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\ferramentas\MARRETAcmusica.mp4" type="video/mp4"></video>
+          <video id="VTE3" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\ferramentas\MANCHEcmusica.mp4" type="video/mp4"></video>
+          <video id="VTE4" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\ferramentas\TELEFONEcmusica.mp4" type="video/mp4"></video>
+        </a>
+      </div>
+
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <img src="C:\Users\Pedro\Documents\site\Imagens\Elementos\Carvão.jpg" style="width:500px;height:300px;position:fixed;left:200px;top:80px;"onclick="pegar4(vet = 0)"/>
+          <img src="C:\Users\Pedro\Documents\site\Imagens\Elementos\apito.jpg" style="width:150px;height:160px;position:fixed;left:500px;top:400px;"onclick="pegar4(vet = 1)"/>
+                <img src="C:\Users\Pedro\Documents\site\Imagens\Elementos\Fios.jpg" style="width:150px;height:160px;position:fixed;right:500px;top:400px;"onclick="pegar4(vet = 2)"/>
+                <img src="C:\Users\Pedro\Documents\site\Imagens\Elementos\Trilhos.jpg" style="width:150px;height:160px;position:fixed;right:500px;top:150px;"onclick="pegar4(vet = 3)"/>
+        </a>
+      </div>
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <video id="VQE1" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\elementos\CARVAOcmusica.mp4" type="video/mp4"></video>
+          <video id="VQE2" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\elementos\APITOcmusica.mp4" type="video/mp4"></video>
+          <video id="VQE3" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\elementos\FIOScmusica.mp4" type="video/mp4"></video>
+          <video id="VQE4" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\elementos\TRILHOScmusica.mp4" type="video/mp4"></video>
+        </a>
+      </div>
+
+      <div class="list-group">
+        <a href="javascript:void(0)" class="list-group-item active">
+          <h1 onclick="resultado()">clique aqui para saber sua resposta</h1>
+          <video id="resultado1" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\resultados\CONDUTORTROLLEYcmusica.mp4" type="video/mp4"></video>
+          <video id="resultado2" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\resultados\MAQUINISTAcmusica.mp4" type="video/mp4"></video>
+          <video id="resultado3" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\resultados\MECANICOcmusica.mp4" type="video/mp4"></video>
+          <video id="resultado4" width="800" height="600" controls><source src="C:\Users\Pedro\Documents\site\Videos\resultados\TELEFONISTAcmusica.mp4" type="video/mp4"></video>
+        </a>
+      </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="testando.js"></script>
+</body>
+
+</html>
