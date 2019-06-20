@@ -68,7 +68,9 @@ void imprimir_pilha(struct pilha *pilha_visitantes)
                 printf("Data: %s \n", percorre_pilha->visitante->nota);
 
                 printf("Nota: %s \n", percorre_pilha->visitante->data);
-            
+
+                printf("Palavra: %s \n", percorre_pilha->visitante->palavra);
+
                 printf("-------------------------\n");
 
                 percorre_pilha = percorre_pilha->prox_visitante;

@@ -1,12 +1,13 @@
 struct visitantes{
-	char *idade;
-	char *nota; 
-	char *data;
+		char *idade;
+		char *nota; 
+		char *data;
+		char *palavra;
 };
 
 struct pilha{
-	struct visitantes *visitante;
-	struct pilha *prox_visitante;
+		struct visitantes *visitante;
+		struct pilha *prox_visitante;
 };
 
 FILE *pont_arq;
@@ -20,3 +21,4 @@ void cadastrar_visitante();
 void incluir_visitante();
 void consulta_tudo();
 void destruir_pilha(struct pilha *pilha_visitantes);
+void cadastro(int argc, char *argv[]);
