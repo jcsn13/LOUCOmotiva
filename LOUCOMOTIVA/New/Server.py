@@ -32,4 +32,4 @@ class HelloWorld(Resource):
 api.add_resource(HelloWorld, '/teste')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)																		

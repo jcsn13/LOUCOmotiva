@@ -1,7 +1,7 @@
 struct visitantes{
-	char *idade; // idade do visitante
-	char *nota; // Nota que o visitante da ao museu
-	char *data; //Data de visita
+	char *idade;
+	char *nota; 
+	char *data;
 };
 
 struct pilha{
@@ -11,7 +11,7 @@ struct pilha{
 
 FILE *pont_arq;
 
-struct pilha *pilha;// inicialização da pilha
+struct pilha *pilha;
 
 struct pilha * empilhar(struct pilha *pilha_visitantes, struct visitantes *v);
 void desempilhar_e_salvar();
